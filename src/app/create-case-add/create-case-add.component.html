@@ -1,0 +1,129 @@
+<div class="container register">
+    <div class="row">
+        <div class="col-md-3 register-left">
+            <img src="assets/image/bannerinvoice.png" alt="" />
+            <!-- <img src="../../assets/image/bannerinvoice-small.png" alt="" /> -->
+            <h3>Welcome</h3>
+            <p><strong>Easily Create Case for your existing product</strong></p>
+            <!-- <input type="submit" name="" value="View Case Status" (click)="viewCaseAdd()" /><br/> -->
+        </div>
+        <div class="col-md-9 register-right">
+            <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Case</a>
+                </li>
+                <!-- <li class="nav-item">
+                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Hirer</a>
+                </li> -->
+            </ul>
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                    <h3 class="register-heading">Create Case</h3>
+                    <!-- <form [formGroup]="myRegistrationForm" (ngSubmit)="onSubmitUserDetails(myRegistrationForm.value)"> -->
+                    <form (ngSubmit)="onSubmitUserDetails()">
+                        <div class="row register-form">
+
+                            <div class="col-md-12">
+                                <!-- <div class="row">
+                                <div class="col-md-12 text-center mt-3 mb-5 create-case-add-title">
+                                    <h2>Create Case Add</h2>
+                                </div>
+                                </div> -->
+                                <div class="row">
+                                    <div class="col-md-12 alert alert-success" id="alert_success">
+
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 alert alert-danger" id="alert_danger">
+
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label>Company: </label>&nbsp;
+                                        <label><strong>{{this.company_name}}</strong></label>
+                                        <!-- <input type="text" maxlength="20" class="company-code form-control" id="company_code" name="myCompanyCode" required />
+                                        <span class="text-danger" id="errorCompanyCode">Please enter Company Code</span> -->
+                                    </div>
+
+
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label>Product Name<span class="text-danger">*</span></label>
+                                        <input type="text" maxlength="200" class="product-name form-control" id="product_name" name="myProductName" required />
+                                        <span class="text-danger" id="errorProductName">Please enter Product Name</span>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label>Product Sr. No.</label>
+                                        <input type="text" maxlength="200" class="product-no form-control" id="product_no" />
+                                    </div>
+
+
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <label>Enter Fault<span class="text-danger">*</span></label>
+                                        <textarea type="text" maxlength="5000" class="enter-fault form-control" id="enter_fault" name="myEnterFault" required></textarea>
+                                        <span class="text-danger" id="errorEnterFault">Please enter Enter Fault</span>
+                                    </div>
+                                </div>
+                                <app-file-upload></app-file-upload>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <label>Enter Special Remarks</label>
+                                        <textarea type="text" maxlength="5000" class="enter-special-remarks form-control" id="enter_special_remarks"></textarea>
+                                    </div>
+
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label>Enter Fault Reporter Name</label>
+                                        <input type="text" maxlength="200" class="enter-fault-reporter-name form-control" id="enter_fault_reporter_name" />
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label>Enter Contact Email<span class="text-danger">*</span></label>
+                                        <input type="email" maxlength="200" class="enter-contact-email form-control" id="enter_contact_email" name="myEnterContactEmail" required />
+                                        <span class="text-danger" id="errorEnterContactEmail">Please enter Valid Email</span>
+                                    </div>
+
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label>Enter Contact No<span class="text-danger">*</span></label>
+                                        <input type="number" maxlength="200" onKeyPress="if(this.value.length==25) return false;" class="enter-contact-no form-control" id="enter_contact_no" name="myEnterContactNo" required />
+                                        <span class="text-danger" id="errorEnterContactNo">Please enter Contact No</span>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <!-- <label>Enter Contact Email<span class="text-danger">*</span></label> -->
+                                        <input type="hidden" class="enter-user-ip-address" id="enter_user_ip_address" />
+                                    </div>
+
+                                </div>
+
+
+                                <!-- <app-angular-captcha></app-angular-captcha> -->
+                            </div>
+
+
+                            <div class="col-md-12 mt-2">
+                                <!-- <input type="submit" class="btnRegister" value="Register" [disabled]="!myRegistrationForm.valid" /> -->
+                                <input type="submit" class="btnRegister" value="Create Case" />
+                            </div>
+                            <div>
+                                <ngx-invisible-recaptcha #captchaElem [siteKey]="siteKey"></ngx-invisible-recaptcha>
+                            </div>
+
+
+
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>

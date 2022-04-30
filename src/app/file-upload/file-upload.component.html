@@ -1,0 +1,85 @@
+<label class="mt-2"><strong>Attachments:</strong></label><br/>
+<label class="mt-2"><span class="text-danger">*</span><small>Allow File Type : jpeg, png, jpg, gif, pdf, txt, doc, xls, xlsx.</small><br/><span class="text-danger">*</span><small>Max. allowed file size is 2MB per file.</small></label>
+
+<div class="row mt-2">
+    <div class="col-md-12 dispaly-data-inline">
+        <div class="col-md-6 mt-2">
+            <input id="file-in-1" class="" type="file" #myFileInput1 (change)="onChange($event, 1)">
+            <input type="hidden" class="" id="hdn_file_1">
+        </div>
+        <!-- Shareable short link of  uoloaded file -->
+
+        <div class="col-md-6 mt-2">
+            <input class="" type="file" id="file-in-2" (change)="onChange($event, 2)">
+            <input type="hidden" class="" id="hdn_file_2">
+        </div>
+
+
+
+    </div>
+    <div class="col-md-12 view-link-display">
+        <!-- <div class="col-md-6" *ngIf="filePath_1"> -->
+        <div class="col-md-6" [innerHTML]="file1InnerHtml"></div>
+        <div class="col-md-6" [innerHTML]="file2InnerHtml"></div>
+
+        <!-- <div class="col-md-6" *ngIf="filePath_2">
+            <a href="{{this.filePath2}}" target="_blank" id="filePath2">View Here</a>
+        </div> -->
+    </div>
+</div>
+<div class="row">
+
+    <div class="col-md-12 dispaly-data-inline">
+        <div class="col-md-6 mt-2">
+            <input class="" id="file-in-3" type="file" (change)="onChange($event, 3)">
+            <input type="hidden" class="" id="hdn_file_3">
+        </div>
+
+        <div class="col-md-6 mt-2">
+            <input class="" type="file" id="file-in-4" (change)="onChange($event, 4)">
+            <input type="hidden" class="" id="hdn_file_4">
+        </div>
+
+
+    </div>
+    <div class="col-md-12 view-link-display">
+        <div class="col-md-6" [innerHTML]="file3InnerHtml"></div>
+        <div class="col-md-6" [innerHTML]="file4InnerHtml"></div>
+        <!-- <div class="col-md-6" *ngIf="filePath_3">
+            <a href="{{this.filePath3}}" target="_blank" id="filePath3">View Here</a>
+        </div>
+        <div class="col-md-6" *ngIf="filePath_4">
+            <a href="{{this.filePath4}}" target="_blank" id="filePath4">View Here</a>
+        </div> -->
+    </div>
+</div>
+<div class="row">
+
+    <div class="col-md-12 dispaly-data-inline">
+        <div class="col-md-6 mt-2">
+            <input class="" type="file" id="file-in-5" (change)="onChange($event, 5)">
+            <input type="hidden" class="" id="hdn_file_5">
+        </div>
+
+
+        <!-- <div class="col-md-12  text-danger">{{this.errorMessage}}</div> -->
+
+        <!-- 
+            Flag variable is used here-->
+
+    </div>
+    <div class="col-md-12">
+        <div class="col-md-6 file-margin-size-left" [innerHTML]="file5InnerHtml"></div>
+
+        <!-- <div class="col-md-6" *ngIf="filePath_5">
+            <a href="{{this.filePath5}}" target="_blank" id="filePath5">View Here</a>
+        </div> -->
+    </div>
+    <div class="col-md-12 file-upload-button-center mt-3">
+        <div class="container" *ngIf="loading">
+            <h3>Loading ...</h3>
+        </div>
+        <input type="button" value="Upload" (click)="onUpload()" class="btn btn-success mt-2 mb-2" />
+
+    </div>
+</div>

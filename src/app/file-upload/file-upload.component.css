@@ -1,0 +1,21 @@
+.dispaly-data-inline {
+    display: contents;
+}
+
+.file-upload-button-center {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+input[type="file"] {
+    width: 100%;
+}
+
+.col-md-12.view-link-display {
+    display: contents;
+}
+
+.col-md-6.file-margin-size-left {
+    padding: 0px !important;
+}
